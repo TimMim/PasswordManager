@@ -26,10 +26,21 @@ def Read():
             print("This is not a valid number! Please enter again!")
             continue
     print("If you want to add new Details or view others, restart the program!")
+    file.close
 
 
 def Add():
-    print("yes2")
+    file = open("Storage", "a")
+
+    username = input("Input your Username:")
+    password = input("Input your Password:")
+
+    file.write("Username: " + username + "\n")
+    file.write("Password: " + password + "\n")
+
+    print("You have succesfully added "+ username + " and "+ password+ " to your Database!")
+    print("If you want to add new Details or view others, restart the program!")
+    file.close
 
 while True:
 
